@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Quiz</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <style>
+            .visible.answer
+            {
+                color : #0F0;
+                /*color : green;*/
+                /*border : 1px solid green;*/
+            }
+
+            .visible.answer pre,
+            pre.answer code
+            {
+                border : 1px solid #0F0;
+            }
+
+            .hidecomments .hljs-comment
+            {
+                visibility: hidden;
+            }
+
+            div.flex
+            {
+                display: flex;
+                justify-content: center
+            }
+
+                div.flex pre
+                {
+                    width : 100%;
+                    box-shadow : none;
+                }
+
+                div.flex code
+                {
+                    text-align: center;
+                }
+
+            code.centre
+            {
+                text-align: center;
+            }
+
+            span.term
+            {
+                color: cyan;
+            }
+
+            .reveal h4
+            {
+                color : #f9e05a;
+            }
+        </style>
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+            //data-background="#f7f2d3"
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h3>Quiz</h3>
+                </section>
+
+                <section>
+                    <h3>Part 1</h3>
+                    <h4>General Knowledge</h4>
+                </section>
+
+                <section>
+                    <p>The British actor who played the droid R2-D2 in the Star Wars films died at 81. What was his name?</p>
+                    <p class="fragment answer">Kenny Baker</p>
+                </section>
+
+                <section>
+                    <p>In the biographical film 'Steve Jobs' who plays the title character?</p>
+                    <p class="fragment answer">Michael Fassbender</p>
+                </section>
+
+                <section>
+                    <p>Jason Kenny and Laura Trott became the most successful Olympic couple ever, How many Olympic Medals have they won?</p>
+                    <p class="fragment answer">11 (10 Gold, 1 Silver)</p>
+                </section>
+
+                <section>
+                    <p>Marcus Ellis and Chris Langridge won Great Britain's first Olympic badminton men's doubles medal. At which Olympics was Britain’s last badminton medal?</p>
+                    <p class="fragment answer">Athens 2004 (Nathan Robertson &amp; Gail Emms)</p>
+                </section>
+
+                <section>
+                    <p>Donald Trump introduced the Indiana governor as his vice-presidential running mate. What is his name?</p>
+                    <p class="fragment answer">Mike Pence</p>
+                </section>
+
+                <section>
+                    <p>Which MEP who was favourite for the UKIP leadership race missed the deadline?</p>
+                    <p class="fragment answer">Stephen Woolfe</p>
+                </section>
+
+                <section>
+                    <p>Hugh Grosvenor will inherit a £9 billion estate following his father's death. What title will he also inherit?</p>
+                    <p class="fragment answer">Duke of Westminster</p>
+                </section>
+
+                <section>
+                    <p>Who is appearing on the new £5 note along with the Queen?</p>
+                    <p class="fragment answer">Winston Churchill</p>
+                </section>
+
+                <section>
+                    <section>
+                        <p>What term is given to a piece of rock or metal from space that reaches the surface of the Earth?</p>
+                        <p class="fragment answer">Meteorite</p>
+                    </section>
+                    <section>
+                        <p><span class="term">Asteroid:</span> a large rocky body in space, in orbit around the Sun.</p>
+                        <p><span class="term">Meteoroid:</span> much smaller rocks or particles in orbit around the Sun.</p>
+                        <p><span class="term">Meteor:</span> If a meteoroid enters the Earth’s atmosphere and vaporizes, it becomes a meteor, which is often called a shooting star.</p>
+                        <p><span class="term">Meteorite:</span> If a small asteroid or large meteoroid survives its fiery passage through the Earth’s atmosphere and lands on Earth’s surface, it is then called a meteorite.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <p>What is manufactured by the Haber process?</p>
+                    <p class="fragment answer">Ammonia</p>
+                </section>
+
+                <section>
+                    <h3>Part 2</h3>
+                    <h4>Computer history</h4>
+                </section>
+
+                <section>
+                    <p>Who designed JavaScript?</p>
+                    <p class="fragment answer">Brendan Eich</p>
+                </section>
+
+                <section>
+                    <p>How long did it take him to create the prototype?</p>
+                    <p class="fragment answer">10 days</p>
+                </section>
+
+                <section>
+                    <p>In what year was JavaScript created?</p>
+                    <p class="fragment answer">1995</p>
+                </section>
+
+                <section>
+                    <p>"JavaScript" is a trademarked term, who owns that trademark?</p>
+                    <p class="fragment answer">Oracle Corporation</p>
+                </section>
+
+                <section>
+                    <h3>Part 3</h3>
+                    <h4>Technical</h4>
+                </section>
+
+                <section>
+                    <p>What's the result of the following expression?</p>
+                    <pre><code class="javascript">['10','10','10'].map(parseInt);</code></pre>
+                    <div class="fragment answer">
+                        <pre><code class="javascript">[10, NaN, 2]</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <p>What's the result of the following expression?</p>
+<pre><code class="javascript">for (var i = 1; i <= 10; i++) {
+    setTimeout((function (i) {
+        console.log(i);
+    })(i), 10);
+}</code></pre>
+                    <div class="fragment answer">
+                        <pre><code>1 2 3 4 5 6 7 8 9 10</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Which of the following evaluate to true?</p>
+                    <div class="flex">
+                        <div>
+                            <pre><code class="javascript">3 == '3'</code></pre>
+                            <pre><code class="javascript">3 == '3.'</code></pre>
+                            <pre><code class="javascript">3 == '03'</code></pre>
+                            <pre><code class="javascript">3.toString() === '3'</code></pre>
+                            <pre><code class="javascript">3..toString() === '3'</code></pre>
+                            <pre><code class="javascript">3 .toString() === '3'</code></pre>
+                        </div>
+
+                        <div>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                            <pre class="fragment"><code class="javascript">// SyntaxError</code></pre>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p>What do the following evaluate to?</p>
+                    <div class="flex">
+                        <div>
+                            <pre><code class="javascript">[] + []</code></pre>
+                            <pre><code class="javascript">[] + {}</code></pre>
+                            <pre><code class="javascript">{} + []</code></pre>
+                            <pre><code class="javascript">[] == []</code></pre>
+                            <pre><code class="javascript">[] != []</code></pre>
+                            <pre><code class="javascript">[] == ![]</code></pre>
+                        </div>
+
+                        <div>
+                            <pre class="fragment"><code class="javascript">// ''</code></pre>
+                            <pre class="fragment"><code class="javascript">// {}</code></pre>
+                            <pre class="fragment"><code class="javascript">// 0</code></pre>
+                            <pre class="fragment"><code class="javascript">// false</code></pre>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                            <pre class="fragment"><code class="javascript">// true</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Bonus to both teams:</p>
+                    <p>Given that</p>
+                    <pre><code class="javascript centre">Array(16).join('a' + 1)</code></pre>
+                    <p>evaluates to</p>
+                    <div class="fragment">
+                        <pre><code class="javascript centre">'a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1'</code></pre>
+                    </div>
+                    <div class="fragment">
+                    <p>what does</p>
+                    <div class="flex">
+                        <div>
+                            <pre><code class="javascript centre">Array(16).join('a' - 1)</code></pre>
+                        </div>
+                        <div class="fragment">
+                            <pre><code class="javascript centre"> + ' Batman!'</code></pre>
+                        </div>
+                    </div>
+                    <p>evaluate to?</p>
+                    </div>
+                    <div class="fragment answer">
+                        <pre><code class="javascript centre">'NaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaN Batman!'</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <p>What would the following RegEx look for?</p>
+                    <pre><code class="regex centre">(\b[A-Z]+\b)(?=.*(?=\b[a-z]+\b)(?i)\1)</code></pre>
+                    <div class="fragment answer">
+                        <p>Uppercase word that appears later in lowercase, e.g.</p>
+                        <pre><code class="perl centre">"ABC 123 abc"</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <p>What would the following RegEx look for?</p>
+                    <pre><code class="regex centre">(cat|dog)</code></pre>
+                    <div class="fragment answer">
+                        <p>Either "cat" or "dog" in a string</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Part 4</h3>
+                    <h4>Call My Bluff</h4>
+                </section>
+
+                <section>
+                    <p>Last 4 Labour Prime Ministers</p>
+                    <div class="fragment answer">
+                        <p>Gordon Brown</p>
+                        <p>Tony Blair</p>
+                        <p>James Callaghan</p>
+                        <p>Harold Wilson</p>
+                    </div>
+                </section>
+
+                <section>
+                    <p>4 Events in which Bradley Wiggins has won an Olympic medal</p>
+                    <div class="fragment answer">
+                        <p>Madison</p>
+                        <p>Individual Pursuit</p>
+                        <p>Team Pursuit</p>
+                        <p>Individual Time Trial</p>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Top 5 Countries in Rio Medals Table</p>
+                    <div class="fragment answer">
+                        <p>US</p>
+                        <p>GB</p>
+                        <p>China</p>
+                        <p>Germany</p>
+                        <p>Russia</p>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Five Conservative MPs who put themselves forward to be the leader of the party</p>
+                    <div class="fragment answer">
+                        <p>Theresa May</p>
+                        <p>Liam Fox</p>
+                        <p>Stephen Crabb</p>
+                        <p>Andrea Leadsom</p>
+                        <p>Michael Gove</p>
+                </section>
+
+                <section>
+                    <h3>Part 5</h3>
+                    <h4>Where am I/are they?</h4>
+                </section>
+
+                <section>
+                    <img src="images/loc_wayne_nogit.jpg">
+                </section>
+
+                <section>
+                    <img src="images/loc_gareth_nogit.jpg">
+                </section>
+
+                <section>
+                    <img src="images/loc_ben_nogit.jpg">
+                </section>
+
+                <section>
+                    <pre><code class="html centre">&lt;img src="Stan's hometown.jpg"&gt;</code></pre>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
